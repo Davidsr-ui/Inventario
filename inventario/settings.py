@@ -136,3 +136,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dlcfurmm1',
+    'API_KEY': '439774357672648',
+    'API_SECRET': 'YNjb67xzpwsRvrsAz6DW3XuLcZg'
+}
