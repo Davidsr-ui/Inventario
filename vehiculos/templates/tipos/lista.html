@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+   
+    <a href="/tipos/crear/" class="btn btn-primary">
+        <i class="bi bi-plus-circle-fill"></i>      
+        Nuevo Tipo
+    </a>
+
+</div>
+
+<table class="table table-bordered table-hover align-middle">
+
+    <thead class="table-primary">
+        <tr>
+            <th>Imagen</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for t in tipos %}
+
+        <tr>
+            <td>
+                <img src="{{ t.imagen.url }}"
+                    width="100"
+                    height="70"
+                    style="object-fit: cover; border-radius: 10px;">
+            </td>
+
+            <td>{{ t.tipo }}</td>
+            <td>{{ t.descripcion }}</td>
+
+            <td>
+                <a href="/tipos/editar/{{ t.id }}/" class="btn btn-success">
+                    <i class="bi bi-pencil-square"></i>
+                </a>
+
+                <a href="/tipos/eliminar/{{ t.id }}/" class="btn btn-danger">
+                   <i class="bi bi-trash-fill"></i>
+                </a>
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+{% endblock %}

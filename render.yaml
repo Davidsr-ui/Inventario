@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: inventario-vehiculos
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn inventario.wsgi:application"

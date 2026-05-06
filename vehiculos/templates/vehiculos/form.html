@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-md-6">
+
+        <div class="card p-4">
+
+            <h2 class="mb-4 text-center">
+                {{ titulo }}
+            </h2>
+
+            <form method="POST" enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <div class="d-flex gap-2 mt-4">
+
+                    <button class="btn btn-primary w-50">
+                        Guardar
+                    </button>
+
+                    <a href="/vehiculos/"
+                       class="btn btn-secondary w-50">
+
+                        Cancelar
+
+                    </a>
+
+                </div>
+
+            </form>
+
+            <hr>
+
+            <a href="/"
+               class="btn btn-outline-dark mt-2">
+
+                ← Volver al Inventario
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
