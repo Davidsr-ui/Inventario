@@ -16,7 +16,7 @@ import os
 import cloudinary
 
 cloudinary.config(
-    cloud_name='dlcfurmm1',
+    cloud_name='dlcfurnm1',
     api_key='439774357672648',
     api_secret='YNjb67xzpwsRvrsAz6DW3XuLcZg'
 )
@@ -134,7 +134,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'dlcfurmm1',
+    'CLOUD_NAME': 'dlcfurnm1',
     'API_KEY': '439774357672648',
     'API_SECRET': 'YNjb67xzpwsRvrsAz6DW3XuLcZg'
 }
